@@ -1,0 +1,23 @@
+def net_amount():
+
+    net__amount = 0
+
+    while True:
+        transaction = input()
+        if not transaction:
+            break
+
+        transaction = transaction.split()
+        type = transaction[0]
+        amount = int(transaction[1])
+
+        if type == "D":
+            net__amount += amount
+        elif type == "W":
+            net__amount -= amount
+    print(net__amount)
+
+
+
+if __name__ == '__main__':
+    net_amount()
